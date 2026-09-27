@@ -1,0 +1,469 @@
+{
+  "metadata": {
+    "continuous_controls": [
+      "age_2025",
+      "log_adt",
+      "truck_pct",
+      "log_aadtt",
+      "structure_length_m",
+      "max_span_m",
+      "deck_width_m",
+      "lanes_on"
+    ],
+    "categorical_controls": [
+      "structure_kind_code",
+      "structure_type_code",
+      "functional_class_code",
+      "design_load_code",
+      "highway_system_code",
+      "national_network",
+      "deck_protection_code"
+    ],
+    "truck_item_109_policy": "Blank Item 109 retained as missing; final expanded models use complete cases for truck_pct/log_aadtt.",
+    "covariance_rule": "cluster by 25-km border segment when clusters >= 10; otherwise HC3",
+    "wild_cluster_rule": "exhaust all Rademacher sign patterns when clusters <= 10; otherwise 50,000 seeded Monte Carlo patterns",
+    "placebo_rule": "pseudo-side and shared fixed-effect/category levels are defined relative to each shifted cutoff"
+  },
+  "baseline": [
+    {
+      "border_pair": "KS-MO",
+      "n": 2784,
+      "clusters": 18,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.42497650623074,
+      "se": 0.041893127477081585,
+      "p_value": 1.2544941368268493e-08,
+      "hc3_se": 0.0645466414397465
+    }
+  ],
+  "small_cluster": [
+    {
+      "border_pair": "KS-MO",
+      "df": 17,
+      "inference_reference": "t(17)",
+      "estimate_a_minus_b": 0.42497650623074,
+      "se": 0.041893127477081585,
+      "ci_low": 0.3365897332754364,
+      "ci_high": 0.5133632791860436,
+      "p_value": 1.2544941368268493e-08
+    }
+  ],
+  "donut": [
+    {
+      "border_pair": "KS-MO",
+      "specification": "Donut: exclude <0.5 mile",
+      "n": 2613,
+      "clusters": 18,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.4544155759416076,
+      "se": 0.03819811480075316,
+      "ci_low": 0.37382459829111325,
+      "ci_high": 0.5350065535921019,
+      "p_value": 1.149006684395042e-09
+    },
+    {
+      "border_pair": "KS-MO",
+      "specification": "Donut: exclude <1.0 mile",
+      "n": 2430,
+      "clusters": 18,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.4958732402960022,
+      "se": 0.03885058077453838,
+      "ci_low": 0.41390567977000964,
+      "ci_high": 0.5778408008219948,
+      "p_value": 3.8939138053354714e-10
+    },
+    {
+      "border_pair": "KS-MO",
+      "specification": "Exclude shared-state structures",
+      "n": 2744,
+      "clusters": 18,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.44841591551578297,
+      "se": 0.045468123928592584,
+      "ci_low": 0.3524865593563826,
+      "ci_high": 0.5443452716751833,
+      "p_value": 1.8967529413861208e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "specification": "State-owned/state-maintained only",
+      "n": 1423,
+      "clusters": 18,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.6711889350548707,
+      "se": 0.09734557694173232,
+      "ci_low": 0.46580772039003215,
+      "ci_high": 0.8765701497197091,
+      "p_value": 2.5950386435416918e-06
+    }
+  ],
+  "spatial_validation": [
+    {
+      "border_pair": "KS-MO",
+      "excluded_geometry_mismatches": 19,
+      "n": 2765,
+      "clusters": 18,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.44403334273666617,
+      "se": 0.05055557463930837,
+      "ci_low": 0.3373704038163385,
+      "ci_high": 0.5506962816569939,
+      "p_value": 1.0007068270131164e-07
+    }
+  ],
+  "equivalence": [
+    {
+      "border_pair": "KS-MO",
+      "margin": 0.25,
+      "estimate": 0.42497650623074,
+      "ci90_low": 0.35209893989528845,
+      "ci90_high": 0.4978540725661916,
+      "p_lower": 4.95184104875577e-12,
+      "p_upper": 0.9996836954008809,
+      "tost_p": 0.9996836954008809,
+      "equivalent": false,
+      "inference_reference": "t(17)"
+    },
+    {
+      "border_pair": "KS-MO",
+      "margin": 0.5,
+      "estimate": 0.42497650623074,
+      "ci90_low": 0.35209893989528845,
+      "ci90_high": 0.4978540725661916,
+      "p_lower": 2.9541861486390656e-14,
+      "p_upper": 0.04557152013693362,
+      "tost_p": 0.04557152013693362,
+      "equivalent": true,
+      "inference_reference": "t(17)"
+    },
+    {
+      "border_pair": "KS-MO",
+      "margin": 0.25,
+      "test": "magnitude_exceeds",
+      "direction": "A higher by >0.25",
+      "estimate": 0.42497650623074,
+      "one_sided_p": 0.0003163045991191536,
+      "inference_reference": "t(17)"
+    }
+  ],
+  "leave_one_segment": [
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:0",
+      "n": 2686,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.43593157757147954,
+      "se": 0.04786562194226867,
+      "p_value": 9.923552996904071e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:1",
+      "n": 2686,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.42797940284704244,
+      "se": 0.04730336597301605,
+      "p_value": 1.0850356970905034e-07
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:10",
+      "n": 2548,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.4249662387581674,
+      "se": 0.042416421472828994,
+      "p_value": 2.6755823001077315e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:11",
+      "n": 2072,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.41148185177932306,
+      "se": 0.06182569230960293,
+      "p_value": 5.525369083213254e-06
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:12",
+      "n": 2378,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.4079607187665915,
+      "se": 0.06325436452096285,
+      "p_value": 8.029498064352364e-06
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:13",
+      "n": 2650,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.4188833898494499,
+      "se": 0.04695504643227911,
+      "p_value": 1.3123427043989147e-07
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:14",
+      "n": 2697,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.43364285782393086,
+      "se": 0.04746294465701602,
+      "p_value": 9.504176606594426e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:15",
+      "n": 2698,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.42353025052190524,
+      "se": 0.042753155491909306,
+      "p_value": 3.130311073870227e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:16",
+      "n": 2685,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.4209606029991325,
+      "se": 0.04292121326069565,
+      "p_value": 3.596172805419844e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:17",
+      "n": 2689,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.4195379934996913,
+      "se": 0.04434079277776754,
+      "p_value": 5.8987357402898946e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:2",
+      "n": 2674,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.4390584650144583,
+      "se": 0.045592326211702346,
+      "p_value": 4.628790341959944e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:3",
+      "n": 2703,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.4328837125078484,
+      "se": 0.0432189643006323,
+      "p_value": 2.686195638798282e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:4",
+      "n": 2719,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.4283066788656549,
+      "se": 0.04210861321942522,
+      "p_value": 2.1670698429580987e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:5",
+      "n": 2702,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.42706032756805,
+      "se": 0.043357194714856356,
+      "p_value": 3.389200858898788e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:6",
+      "n": 2633,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.38057834309348887,
+      "se": 0.030480632818871416,
+      "p_value": 1.1552176280854545e-09
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:7",
+      "n": 2725,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.4204157229029975,
+      "se": 0.04247984499140446,
+      "p_value": 3.172630832607775e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:8",
+      "n": 2690,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.43195851114240696,
+      "se": 0.04269930168771879,
+      "p_value": 2.3381198266265985e-08
+    },
+    {
+      "border_pair": "KS-MO",
+      "omitted_segment": "KS-MO:9",
+      "n": 2693,
+      "clusters": 17,
+      "covariance": "cluster_25km",
+      "estimate": 0.4372990333788531,
+      "se": 0.04798676954141621,
+      "p_value": 9.842617019358635e-08
+    }
+  ],
+  "wild_cluster": [
+    {
+      "border_pair": "KS-MO",
+      "clusters": 18,
+      "estimate": 0.42497650623074,
+      "bootstrap_p": 3.999920001599968e-05,
+      "method": "monte_carlo_rademacher",
+      "patterns": 50000,
+      "seed": 42,
+      "null_q025": -0.3204137074453701,
+      "null_q975": 0.31862655203599594
+    }
+  ],
+  "ordinal": [
+    {
+      "border_pair": "KS-MO",
+      "threshold": 5,
+      "n": 2784,
+      "odds_ratio_a_vs_b": 2.275414380072714,
+      "ci_low": 1.1452129557523638,
+      "ci_high": 4.52100246948416,
+      "p_value": 0.018921231253272927,
+      "model": "Cumulative binary GEE, independence working correlation, cluster-robust by 25-km segment"
+    },
+    {
+      "border_pair": "KS-MO",
+      "threshold": 6,
+      "n": 2784,
+      "odds_ratio_a_vs_b": 3.458902804639042,
+      "ci_low": 2.4612241989870607,
+      "ci_high": 4.860999098279519,
+      "p_value": 8.832768205015562e-13,
+      "model": "Cumulative binary GEE, independence working correlation, cluster-robust by 25-km segment"
+    },
+    {
+      "border_pair": "KS-MO",
+      "threshold": 7,
+      "n": 2784,
+      "odds_ratio_a_vs_b": 7.113213479374368,
+      "ci_low": 4.763879402870149,
+      "ci_high": 10.621134945747992,
+      "p_value": 8.623480959469215e-22,
+      "model": "Cumulative binary GEE, independence working correlation, cluster-robust by 25-km segment"
+    }
+  ],
+  "placebo": [
+    {
+      "border_pair": "KS-MO",
+      "cutoff": -15,
+      "window": 4,
+      "n": 521,
+      "clusters": 15,
+      "covariance": "cluster_25km",
+      "inference_reference": "t(14)",
+      "pseudo_left_minus_right": 0.014311411661706205,
+      "se": 0.22238782489462855,
+      "ci_low": -0.4626630347272887,
+      "ci_high": 0.4912858580507011,
+      "p_value": 0.9495986957364689,
+      "significant": false
+    },
+    {
+      "border_pair": "KS-MO",
+      "cutoff": -10,
+      "window": 4,
+      "n": 657,
+      "clusters": 16,
+      "covariance": "cluster_25km",
+      "inference_reference": "t(15)",
+      "pseudo_left_minus_right": -0.09281564437580406,
+      "se": 0.12533054557670978,
+      "ci_low": -0.3599513787900408,
+      "ci_high": 0.1743200900384327,
+      "p_value": 0.470390612974008,
+      "significant": false
+    },
+    {
+      "border_pair": "KS-MO",
+      "cutoff": -5,
+      "window": 4,
+      "n": 964,
+      "clusters": 18,
+      "covariance": "cluster_25km",
+      "inference_reference": "t(17)",
+      "pseudo_left_minus_right": -0.17924809311717077,
+      "se": 0.11856244145622928,
+      "ci_low": -0.4293929790474738,
+      "ci_high": 0.07089679281313227,
+      "p_value": 0.14893943291571138,
+      "significant": false
+    },
+    {
+      "border_pair": "KS-MO",
+      "cutoff": 5,
+      "window": 4,
+      "n": 1272,
+      "clusters": 18,
+      "covariance": "cluster_25km",
+      "inference_reference": "t(17)",
+      "pseudo_left_minus_right": -0.1431643481783601,
+      "se": 0.08793169243233073,
+      "ci_low": -0.3286840026573393,
+      "ci_high": 0.04235530630061915,
+      "p_value": 0.121886863989089,
+      "significant": false
+    },
+    {
+      "border_pair": "KS-MO",
+      "cutoff": 10,
+      "window": 4,
+      "n": 958,
+      "clusters": 18,
+      "covariance": "cluster_25km",
+      "inference_reference": "t(17)",
+      "pseudo_left_minus_right": 0.018731193733209764,
+      "se": 0.12091492978394276,
+      "ci_low": -0.23637700871757422,
+      "ci_high": 0.2738393961839937,
+      "p_value": 0.8787149513807103,
+      "significant": false
+    },
+    {
+      "border_pair": "KS-MO",
+      "cutoff": 15,
+      "window": 4,
+      "n": 896,
+      "clusters": 16,
+      "covariance": "cluster_25km",
+      "inference_reference": "t(15)",
+      "pseudo_left_minus_right": 0.04258099262903581,
+      "se": 0.09077461540122872,
+      "ci_low": -0.15090052011627655,
+      "ci_high": 0.23606250537434817,
+      "p_value": 0.6457543971853362,
+      "significant": false
+    }
+  ]
+}

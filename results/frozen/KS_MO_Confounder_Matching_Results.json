@@ -1,0 +1,1352 @@
+{
+  "metadata": {
+    "rows": 5216,
+    "national_rows_found": 5216,
+    "pairs": [
+      "KS-MO"
+    ],
+    "analysis_bandwidth": 10,
+    "expanded_continuous_controls": [
+      "age_2025",
+      "log_adt",
+      "truck_pct",
+      "log_aadtt",
+      "structure_length_m",
+      "max_span_m",
+      "deck_width_m",
+      "lanes_on"
+    ],
+    "expanded_categorical_controls": [
+      "structure_kind_code",
+      "structure_type_code",
+      "functional_class_code",
+      "design_load_code",
+      "highway_system_code",
+      "national_network",
+      "deck_protection_code"
+    ],
+    "truck_item_109_policy": "Blank Item 109 retained as missing; truck-expanded models and matching use complete cases for truck_pct/log_aadtt."
+  },
+  "pair_results": {
+    "KS-MO": {
+      "state_a": "KS",
+      "state_b": "MO",
+      "n_a": 1200,
+      "n_b": 1584,
+      "continuity": [
+        {
+          "variable": "truck_pct",
+          "label": "Continuity",
+          "n": 2784,
+          "clusters": 18,
+          "k": 21,
+          "covariance": "cluster_25km",
+          "estimate_a_minus_b": -2.5246607730609743,
+          "se": 1.3155305184128205,
+          "ci_low": -5.1030532097134085,
+          "ci_high": 0.05373166359146042,
+          "p_value": 0.054969163848208914,
+          "r_squared": 0.099738849766978
+        },
+        {
+          "variable": "log_aadtt",
+          "label": "Continuity",
+          "n": 2784,
+          "clusters": 18,
+          "k": 21,
+          "covariance": "cluster_25km",
+          "estimate_a_minus_b": -0.8479246433363168,
+          "se": 0.35083615944712976,
+          "ci_low": -1.535550880327043,
+          "ci_high": -0.16029840634559067,
+          "p_value": 0.0156546983585465,
+          "r_squared": 0.35089553132119
+        },
+        {
+          "variable": "lanes_on",
+          "label": "Continuity",
+          "n": 2784,
+          "clusters": 18,
+          "k": 21,
+          "covariance": "cluster_25km",
+          "estimate_a_minus_b": 0.07538538804820316,
+          "se": 0.07395842344584076,
+          "ci_low": -0.06957045825900746,
+          "ci_high": 0.22034123435541378,
+          "p_value": 0.3080633424419531,
+          "r_squared": 0.17555596260854844
+        },
+        {
+          "variable": "inspection_frequency_months",
+          "label": "Continuity",
+          "n": 2784,
+          "clusters": 18,
+          "k": 21,
+          "covariance": "cluster_25km",
+          "estimate_a_minus_b": -0.8755854762344555,
+          "se": 0.3601961225827385,
+          "ci_low": -1.5815569038675972,
+          "ci_high": -0.16961404860131368,
+          "p_value": 0.015063134078160867,
+          "r_squared": 0.03199948373277317
+        },
+        {
+          "variable": "operating_rating",
+          "label": "Continuity",
+          "n": 2784,
+          "clusters": 18,
+          "k": 21,
+          "covariance": "cluster_25km",
+          "estimate_a_minus_b": -6.178692704026453,
+          "se": 1.397664780602546,
+          "ci_low": -8.918065336467519,
+          "ci_high": -3.4393200715853864,
+          "p_value": 9.83699505868116e-06,
+          "r_squared": 0.10667934189612782
+        },
+        {
+          "variable": "inventory_rating",
+          "label": "Continuity",
+          "n": 2784,
+          "clusters": 18,
+          "k": 21,
+          "covariance": "cluster_25km",
+          "estimate_a_minus_b": -2.1140217031902466,
+          "se": 0.8255087401914694,
+          "ci_low": -3.7319891028885595,
+          "ci_high": -0.496054303491934,
+          "p_value": 0.010441000412475917,
+          "r_squared": 0.08679853554691408
+        },
+        {
+          "variable": "latitude",
+          "label": "Continuity",
+          "n": 2784,
+          "clusters": 18,
+          "k": 21,
+          "covariance": "cluster_25km",
+          "estimate_a_minus_b": -0.016850283790123655,
+          "se": 0.010864417241276418,
+          "ci_low": -0.03814415029604144,
+          "ci_high": 0.004443582715794137,
+          "p_value": 0.12091111071242325,
+          "r_squared": 0.8781762641380735
+        },
+        {
+          "variable": "longitude",
+          "label": "Continuity",
+          "n": 2784,
+          "clusters": 18,
+          "k": 21,
+          "covariance": "cluster_25km",
+          "estimate_a_minus_b": -0.011361792075717858,
+          "se": 0.005396471759455297,
+          "ci_low": -0.02193868236783774,
+          "ci_high": -0.0007849017835979775,
+          "p_value": 0.03525552982276936,
+          "r_squared": 0.8899658555313296
+        }
+      ],
+      "matched_sets": [
+        {
+          "label": "Broad all-owner match",
+          "n_pairs": 347,
+          "stats": [
+            {
+              "outcome": "lowest_rating",
+              "outcome_label": "Lowest rating",
+              "n_pairs": 347,
+              "mean_a_minus_b": 0.5504322766570605,
+              "se": 0.05654417197117513,
+              "df": 346,
+              "inference_reference": "t(346)",
+              "ci_low": 0.43921871703643894,
+              "ci_high": 0.6616458362776821,
+              "p_paired_t": 5.947817288155858e-20,
+              "p_wilcoxon": 7.72298024739509e-18,
+              "median": 1.0
+            },
+            {
+              "outcome": "deck_rating",
+              "outcome_label": "Deck rating",
+              "n_pairs": 347,
+              "mean_a_minus_b": 0.3025936599423631,
+              "se": 0.05722940699460554,
+              "df": 346,
+              "inference_reference": "t(346)",
+              "ci_low": 0.1900323499970703,
+              "ci_high": 0.4151549698876559,
+              "p_paired_t": 2.203554828404587e-07,
+              "p_wilcoxon": 2.1305894021988072e-07,
+              "median": 0.0
+            },
+            {
+              "outcome": "superstructure_rating",
+              "outcome_label": "Superstructure rating",
+              "n_pairs": 347,
+              "mean_a_minus_b": 0.3976945244956772,
+              "se": 0.056636213434068494,
+              "df": 346,
+              "inference_reference": "t(346)",
+              "ci_low": 0.28629993368538187,
+              "ci_high": 0.5090891153059726,
+              "p_paired_t": 1.1646387183554266e-11,
+              "p_wilcoxon": 4.3704427921937064e-11,
+              "median": 0.0
+            },
+            {
+              "outcome": "substructure_rating",
+              "outcome_label": "Substructure rating",
+              "n_pairs": 347,
+              "mean_a_minus_b": 0.4553314121037464,
+              "se": 0.06026555516938731,
+              "df": 346,
+              "inference_reference": "t(346)",
+              "ci_low": 0.33679847264683455,
+              "ci_high": 0.5738643515606583,
+              "p_paired_t": 3.7664980115585197e-13,
+              "p_wilcoxon": 1.8822589132045792e-12,
+              "median": 1.0
+            }
+          ],
+          "balance": [
+            {
+              "variable": "age_2025",
+              "mean_a": 43.77521613832853,
+              "mean_b": 44.363112391930834,
+              "smd": -0.028101122279823514
+            },
+            {
+              "variable": "log_adt",
+              "mean_a": 7.939638241293729,
+              "mean_b": 7.949734166552672,
+              "smd": -0.0037978047990245515
+            },
+            {
+              "variable": "truck_pct",
+              "mean_a": 7.530259365994237,
+              "mean_b": 10.253602305475503,
+              "smd": -0.3105399476824491
+            },
+            {
+              "variable": "log_aadtt",
+              "mean_a": 4.844416928709829,
+              "mean_b": 5.542528159764057,
+              "smd": -0.24111604960605568
+            },
+            {
+              "variable": "structure_length_m",
+              "mean_a": 117.51008645533142,
+              "mean_b": 98.91325648414985,
+              "smd": 0.10201305724379983
+            },
+            {
+              "variable": "max_span_m",
+              "mean_a": 27.355331412103748,
+              "mean_b": 26.7507204610951,
+              "smd": 0.028013833622056943
+            },
+            {
+              "variable": "deck_width_m",
+              "mean_a": 14.824783861671468,
+              "mean_b": 13.91613832853026,
+              "smd": 0.13841354867973338
+            },
+            {
+              "variable": "distance_miles_exact",
+              "mean_a": 3.7784004152200956,
+              "mean_b": 3.8590123843525035,
+              "smd": -0.030243194564058207
+            }
+          ]
+        },
+        {
+          "label": "Broad state-agency match",
+          "n_pairs": 175,
+          "stats": [
+            {
+              "outcome": "lowest_rating",
+              "outcome_label": "Lowest rating",
+              "n_pairs": 175,
+              "mean_a_minus_b": 0.8228571428571428,
+              "se": 0.06670981479588194,
+              "df": 174,
+              "inference_reference": "t(174)",
+              "ci_low": 0.6911925524467977,
+              "ci_high": 0.954521733267488,
+              "p_paired_t": 1.6010766350744194e-25,
+              "p_wilcoxon": 6.106336169430033e-19,
+              "median": 1.0
+            },
+            {
+              "outcome": "deck_rating",
+              "outcome_label": "Deck rating",
+              "n_pairs": 175,
+              "mean_a_minus_b": 0.5657142857142857,
+              "se": 0.06900519618574644,
+              "df": 174,
+              "inference_reference": "t(174)",
+              "ci_low": 0.4295193207037895,
+              "ci_high": 0.7019092507247819,
+              "p_paired_t": 5.1501743875688594e-14,
+              "p_wilcoxon": 3.4165079143717093e-12,
+              "median": 1.0
+            },
+            {
+              "outcome": "superstructure_rating",
+              "outcome_label": "Superstructure rating",
+              "n_pairs": 175,
+              "mean_a_minus_b": 0.5657142857142857,
+              "se": 0.07405547242130754,
+              "df": 174,
+              "inference_reference": "t(174)",
+              "ci_low": 0.4195516337292591,
+              "ci_high": 0.7118769376993124,
+              "p_paired_t": 1.4012705258541767e-12,
+              "p_wilcoxon": 4.3095086724462047e-11,
+              "median": 0.0
+            },
+            {
+              "outcome": "substructure_rating",
+              "outcome_label": "Substructure rating",
+              "n_pairs": 175,
+              "mean_a_minus_b": 0.7028571428571428,
+              "se": 0.07527695365348425,
+              "df": 174,
+              "inference_reference": "t(174)",
+              "ci_low": 0.5542836638203463,
+              "ci_high": 0.8514306218939394,
+              "p_paired_t": 4.663591529084657e-17,
+              "p_wilcoxon": 2.961452084404629e-14,
+              "median": 1.0
+            }
+          ],
+          "balance": [
+            {
+              "variable": "age_2025",
+              "mean_a": 45.25714285714286,
+              "mean_b": 46.26857142857143,
+              "smd": -0.058110618079022174
+            },
+            {
+              "variable": "log_adt",
+              "mean_a": 9.502299044212151,
+              "mean_b": 9.444731026770782,
+              "smd": 0.0351369098318023
+            },
+            {
+              "variable": "truck_pct",
+              "mean_a": 7.8742857142857146,
+              "mean_b": 10.765714285714285,
+              "smd": -0.4238019654291769
+            },
+            {
+              "variable": "log_aadtt",
+              "mean_a": 6.247122284694713,
+              "mean_b": 7.036011097960982,
+              "smd": -0.33810332087468564
+            },
+            {
+              "variable": "structure_length_m",
+              "mean_a": 158.89142857142858,
+              "mean_b": 130.28685714285712,
+              "smd": 0.12361443007230134
+            },
+            {
+              "variable": "max_span_m",
+              "mean_a": 31.925714285714285,
+              "mean_b": 31.787999999999997,
+              "smd": 0.005830840327923087
+            },
+            {
+              "variable": "deck_width_m",
+              "mean_a": 17.856571428571428,
+              "mean_b": 16.379428571428573,
+              "smd": 0.2461842284634816
+            },
+            {
+              "variable": "distance_miles_exact",
+              "mean_a": 3.5336088171447915,
+              "mean_b": 3.5134202962466303,
+              "smd": 0.00771704428566178
+            }
+          ]
+        },
+        {
+          "label": "Exposure-tight all-owner match",
+          "n_pairs": 67,
+          "stats": [
+            {
+              "outcome": "lowest_rating",
+              "outcome_label": "Lowest rating",
+              "n_pairs": 67,
+              "mean_a_minus_b": 0.5373134328358209,
+              "se": 0.11117634687087354,
+              "df": 66,
+              "inference_reference": "t(66)",
+              "ci_low": 0.3153426944443346,
+              "ci_high": 0.7592841712273072,
+              "p_paired_t": 8.374346883774566e-06,
+              "p_wilcoxon": 2.803717754510668e-05,
+              "median": 0.0
+            },
+            {
+              "outcome": "deck_rating",
+              "outcome_label": "Deck rating",
+              "n_pairs": 67,
+              "mean_a_minus_b": 0.22388059701492538,
+              "se": 0.10595326688512706,
+              "df": 66,
+              "inference_reference": "t(66)",
+              "ci_low": 0.012338074280322464,
+              "ci_high": 0.4354231197495283,
+              "p_paired_t": 0.03838546044593475,
+              "p_wilcoxon": 0.03918703150804671,
+              "median": 0.0
+            },
+            {
+              "outcome": "superstructure_rating",
+              "outcome_label": "Superstructure rating",
+              "n_pairs": 67,
+              "mean_a_minus_b": 0.34328358208955223,
+              "se": 0.10958628421848732,
+              "df": 66,
+              "inference_reference": "t(66)",
+              "ci_low": 0.1244875062137252,
+              "ci_high": 0.5620796579653793,
+              "p_paired_t": 0.0025839305336682384,
+              "p_wilcoxon": 0.002737993304809366,
+              "median": 0.0
+            },
+            {
+              "outcome": "substructure_rating",
+              "outcome_label": "Substructure rating",
+              "n_pairs": 67,
+              "mean_a_minus_b": 0.417910447761194,
+              "se": 0.13135561802204557,
+              "df": 66,
+              "inference_reference": "t(66)",
+              "ci_low": 0.1556504945888868,
+              "ci_high": 0.6801704009335012,
+              "p_paired_t": 0.002233647473215142,
+              "p_wilcoxon": 0.0018094384020507902,
+              "median": 0.0
+            }
+          ],
+          "balance": [
+            {
+              "variable": "age_2025",
+              "mean_a": 39.59701492537314,
+              "mean_b": 40.53731343283582,
+              "smd": -0.0557512769842168
+            },
+            {
+              "variable": "log_adt",
+              "mean_a": 8.843074778393028,
+              "mean_b": 8.76215552248566,
+              "smd": 0.04128433901496797
+            },
+            {
+              "variable": "truck_pct",
+              "mean_a": 8.432835820895523,
+              "mean_b": 8.417910447761194,
+              "smd": 0.003558043696412824
+            },
+            {
+              "variable": "log_aadtt",
+              "mean_a": 6.259302329190736,
+              "mean_b": 6.182514646428089,
+              "smd": 0.03867586500983012
+            },
+            {
+              "variable": "structure_length_m",
+              "mean_a": 129.50447761194027,
+              "mean_b": 127.49552238805968,
+              "smd": 0.010334356486064317
+            },
+            {
+              "variable": "max_span_m",
+              "mean_a": 32.44477611940299,
+              "mean_b": 31.879104477611936,
+              "smd": 0.01913197162148303
+            },
+            {
+              "variable": "deck_width_m",
+              "mean_a": 15.302985074626864,
+              "mean_b": 15.16716417910448,
+              "smd": 0.02846505400444743
+            },
+            {
+              "variable": "distance_miles_exact",
+              "mean_a": 2.9527652243730533,
+              "mean_b": 2.6350359516495736,
+              "smd": 0.14120094141832468
+            }
+          ]
+        },
+        {
+          "label": "Exposure-tight state-agency match",
+          "n_pairs": 34,
+          "stats": [
+            {
+              "outcome": "lowest_rating",
+              "outcome_label": "Lowest rating",
+              "n_pairs": 34,
+              "mean_a_minus_b": 0.8235294117647058,
+              "se": 0.17134566617751038,
+              "df": 33,
+              "inference_reference": "t(33)",
+              "ci_low": 0.4749240327749133,
+              "ci_high": 1.1721347907544983,
+              "p_paired_t": 3.2612379904665064e-05,
+              "p_wilcoxon": 0.00022120128519368656,
+              "median": 1.0
+            },
+            {
+              "outcome": "deck_rating",
+              "outcome_label": "Deck rating",
+              "n_pairs": 34,
+              "mean_a_minus_b": 0.35294117647058826,
+              "se": 0.15153612101930217,
+              "df": 33,
+              "inference_reference": "t(33)",
+              "ci_low": 0.04463862014068376,
+              "ci_high": 0.6612437328004928,
+              "p_paired_t": 0.026124143946832122,
+              "p_wilcoxon": 0.026617440024176844,
+              "median": 0.0
+            },
+            {
+              "outcome": "superstructure_rating",
+              "outcome_label": "Superstructure rating",
+              "n_pairs": 34,
+              "mean_a_minus_b": 0.5588235294117647,
+              "se": 0.16988607103342324,
+              "df": 33,
+              "inference_reference": "t(33)",
+              "ci_low": 0.21318771907070022,
+              "ci_high": 0.9044593397528292,
+              "p_paired_t": 0.0023925521426865354,
+              "p_wilcoxon": 0.003393116483125818,
+              "median": 0.5
+            },
+            {
+              "outcome": "substructure_rating",
+              "outcome_label": "Substructure rating",
+              "n_pairs": 34,
+              "mean_a_minus_b": 0.8235294117647058,
+              "se": 0.19563229101887633,
+              "df": 33,
+              "inference_reference": "t(33)",
+              "ci_low": 0.42551252301174114,
+              "ci_high": 1.2215463005176705,
+              "p_paired_t": 0.00018490377378845336,
+              "p_wilcoxon": 0.0004234089437471691,
+              "median": 1.0
+            }
+          ],
+          "balance": [
+            {
+              "variable": "age_2025",
+              "mean_a": 45.529411764705884,
+              "mean_b": 47.411764705882355,
+              "smd": -0.14138525304813956
+            },
+            {
+              "variable": "log_adt",
+              "mean_a": 9.7322164343834,
+              "mean_b": 9.615518122389872,
+              "smd": 0.1340016175953563
+            },
+            {
+              "variable": "truck_pct",
+              "mean_a": 9.117647058823529,
+              "mean_b": 9.794117647058824,
+              "smd": -0.15074536923066814
+            },
+            {
+              "variable": "log_aadtt",
+              "mean_a": 7.205477096628106,
+              "mean_b": 7.178458349614474,
+              "smd": 0.027649743351957985
+            },
+            {
+              "variable": "structure_length_m",
+              "mean_a": 142.6323529411765,
+              "mean_b": 147.88235294117646,
+              "smd": -0.02270025726221613
+            },
+            {
+              "variable": "max_span_m",
+              "mean_a": 31.96176470588235,
+              "mean_b": 34.86470588235294,
+              "smd": -0.09959428075582265
+            },
+            {
+              "variable": "deck_width_m",
+              "mean_a": 16.429411764705883,
+              "mean_b": 16.288235294117644,
+              "smd": 0.03970075547139849
+            },
+            {
+              "variable": "distance_miles_exact",
+              "mean_a": 2.755649048886157,
+              "mean_b": 2.420892848635341,
+              "smd": 0.17112368242561987
+            }
+          ]
+        }
+      ],
+      "age_common_range": [
+        9.0,
+        91.0
+      ],
+      "shares": {
+        "state_agency_a": 0.44416666666666665,
+        "state_agency_b": 0.5618686868686869,
+        "open_unrestricted_a": 0.8116666666666666,
+        "open_unrestricted_b": 0.7935606060606061,
+        "reconstructed_a": 0.11916666666666667,
+        "reconstructed_b": 0.25757575757575757,
+        "recent_improvement_a": 0.015,
+        "recent_improvement_b": 0.18623737373737373,
+        "truck_pct_observed_a": 1.0,
+        "truck_pct_observed_b": 1.0
+      }
+    }
+  },
+  "model_results": [
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Original adjusted",
+      "outcome": "lowest_rating",
+      "outcome_label": "Lowest rating",
+      "label": "Original adjusted",
+      "n": 2784,
+      "clusters": 18,
+      "k": 51,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.4025844680611339,
+      "se": 0.03738608694382072,
+      "ci_low": 0.32930908412836213,
+      "ci_high": 0.4758598519939057,
+      "p_value": 4.859084031042772e-27,
+      "r_squared": 0.4893903456914739
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Original adjusted",
+      "outcome": "deck_rating",
+      "outcome_label": "Deck rating",
+      "label": "Original adjusted",
+      "n": 2784,
+      "clusters": 18,
+      "k": 51,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.2610779517755102,
+      "se": 0.07738502360587252,
+      "ci_low": 0.10940609256521816,
+      "ci_high": 0.4127498109858022,
+      "p_value": 0.0007415088376539891,
+      "r_squared": 0.38428857849108367
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Original adjusted",
+      "outcome": "superstructure_rating",
+      "outcome_label": "Superstructure rating",
+      "label": "Original adjusted",
+      "n": 2784,
+      "clusters": 18,
+      "k": 51,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.3447717297627251,
+      "se": 0.0756455416824381,
+      "ci_low": 0.19650919247412296,
+      "ci_high": 0.4930342670513272,
+      "p_value": 5.171018311604621e-06,
+      "r_squared": 0.48767365264019447
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Original adjusted",
+      "outcome": "substructure_rating",
+      "outcome_label": "Substructure rating",
+      "label": "Original adjusted",
+      "n": 2784,
+      "clusters": 18,
+      "k": 51,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.23502792556320928,
+      "se": 0.05116872386488463,
+      "ci_low": 0.13473906965316024,
+      "ci_high": 0.33531678147325833,
+      "p_value": 4.365108630724388e-06,
+      "r_squared": 0.4815858641063796
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Truck-expanded adjusted",
+      "outcome": "lowest_rating",
+      "outcome_label": "Lowest rating",
+      "label": "Truck-expanded adjusted",
+      "n": 2784,
+      "clusters": 18,
+      "k": 58,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.4249765062307409,
+      "se": 0.041893127477081474,
+      "ci_low": 0.34286748517591586,
+      "ci_high": 0.5070855272855659,
+      "p_value": 3.51283224378098e-24,
+      "r_squared": 0.496000922338774
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Truck-expanded adjusted",
+      "outcome": "deck_rating",
+      "outcome_label": "Deck rating",
+      "label": "Truck-expanded adjusted",
+      "n": 2784,
+      "clusters": 18,
+      "k": 58,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.27654877053142224,
+      "se": 0.07970068238510886,
+      "ci_low": 0.12033830351334299,
+      "ci_high": 0.4327592375495015,
+      "p_value": 0.0005207647219402006,
+      "r_squared": 0.3978824126993511
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Truck-expanded adjusted",
+      "outcome": "superstructure_rating",
+      "outcome_label": "Superstructure rating",
+      "label": "Truck-expanded adjusted",
+      "n": 2784,
+      "clusters": 18,
+      "k": 58,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.35808229633121513,
+      "se": 0.0942859734125972,
+      "ci_low": 0.1732851841952235,
+      "ci_high": 0.5428794084672067,
+      "p_value": 0.0001459671390876804,
+      "r_squared": 0.4979281263828319
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Truck-expanded adjusted",
+      "outcome": "substructure_rating",
+      "outcome_label": "Substructure rating",
+      "label": "Truck-expanded adjusted",
+      "n": 2784,
+      "clusters": 18,
+      "k": 58,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.2757883418142666,
+      "se": 0.046790445744596405,
+      "ci_low": 0.1840807533342822,
+      "ci_high": 0.367495930294251,
+      "p_value": 3.766911768184305e-09,
+      "r_squared": 0.4830155356022463
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Common-age support (9.0-91.0 y)",
+      "outcome": "lowest_rating",
+      "outcome_label": "Lowest rating",
+      "label": "Common-age support (9.0-91.0 y)",
+      "n": 2452,
+      "clusters": 18,
+      "k": 59,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.5356496190964961,
+      "se": 0.057324457588327556,
+      "ci_low": 0.4232957467900803,
+      "ci_high": 0.6480034914029119,
+      "p_value": 9.261081506162044e-21,
+      "r_squared": 0.4348012356060743
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Common-age support (9.0-91.0 y)",
+      "outcome": "deck_rating",
+      "outcome_label": "Deck rating",
+      "label": "Common-age support (9.0-91.0 y)",
+      "n": 2452,
+      "clusters": 18,
+      "k": 59,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.3802427053912618,
+      "se": 0.08632839642893508,
+      "ci_low": 0.21104215754745284,
+      "ci_high": 0.5494432532350708,
+      "p_value": 1.059755619269942e-05,
+      "r_squared": 0.3432412985373823
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Common-age support (9.0-91.0 y)",
+      "outcome": "superstructure_rating",
+      "outcome_label": "Superstructure rating",
+      "label": "Common-age support (9.0-91.0 y)",
+      "n": 2452,
+      "clusters": 18,
+      "k": 59,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.48179004170917406,
+      "se": 0.11691455140836027,
+      "ci_low": 0.25264173168013127,
+      "ci_high": 0.7109383517382168,
+      "p_value": 3.7743912526169734e-05,
+      "r_squared": 0.4406186247810794
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Common-age support (9.0-91.0 y)",
+      "outcome": "substructure_rating",
+      "outcome_label": "Substructure rating",
+      "label": "Common-age support (9.0-91.0 y)",
+      "n": 2452,
+      "clusters": 18,
+      "k": 59,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.3589792987896532,
+      "se": 0.05948197861967468,
+      "ci_low": 0.24239676296590928,
+      "ci_high": 0.47556183461339707,
+      "p_value": 1.5887073408683795e-09,
+      "r_squared": 0.3998970874556389
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "State-owned and state-maintained only",
+      "outcome": "lowest_rating",
+      "outcome_label": "Lowest rating",
+      "label": "State-owned and state-maintained only",
+      "n": 1423,
+      "clusters": 18,
+      "k": 53,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.6711889350548703,
+      "se": 0.09734557694173301,
+      "ci_low": 0.48039511019480086,
+      "ci_high": 0.8619827599149398,
+      "p_value": 5.389913723504349e-12,
+      "r_squared": 0.5391453750137528
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "State-owned and state-maintained only",
+      "outcome": "deck_rating",
+      "outcome_label": "Deck rating",
+      "label": "State-owned and state-maintained only",
+      "n": 1423,
+      "clusters": 18,
+      "k": 53,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.49731754578804616,
+      "se": 0.11347366829571694,
+      "ci_low": 0.2749132427347964,
+      "ci_high": 0.719721848841296,
+      "p_value": 1.1723407742060608e-05,
+      "r_squared": 0.4263773084921195
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "State-owned and state-maintained only",
+      "outcome": "superstructure_rating",
+      "outcome_label": "Superstructure rating",
+      "label": "State-owned and state-maintained only",
+      "n": 1423,
+      "clusters": 18,
+      "k": 53,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.4361451144965582,
+      "se": 0.12850094614664895,
+      "ci_low": 0.18428788806980523,
+      "ci_high": 0.6880023409233111,
+      "p_value": 0.000688544409496791,
+      "r_squared": 0.5374387688834411
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "State-owned and state-maintained only",
+      "outcome": "substructure_rating",
+      "outcome_label": "Substructure rating",
+      "label": "State-owned and state-maintained only",
+      "n": 1423,
+      "clusters": 18,
+      "k": 53,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.45320861737999324,
+      "se": 0.08051026295331502,
+      "ci_low": 0.29541140160564644,
+      "ci_high": 0.61100583315434,
+      "p_value": 1.8104417484373854e-08,
+      "r_squared": 0.512666308406941
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Open/unrestricted only",
+      "outcome": "lowest_rating",
+      "outcome_label": "Lowest rating",
+      "label": "Open/unrestricted only",
+      "n": 2231,
+      "clusters": 18,
+      "k": 59,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.5024317868332819,
+      "se": 0.043651965009815635,
+      "ci_low": 0.41687550755964065,
+      "ci_high": 0.5879880661069232,
+      "p_value": 1.1755114928562864e-30,
+      "r_squared": 0.44715070057227
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Open/unrestricted only",
+      "outcome": "deck_rating",
+      "outcome_label": "Deck rating",
+      "label": "Open/unrestricted only",
+      "n": 2231,
+      "clusters": 18,
+      "k": 59,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.3775887861230337,
+      "se": 0.09119709818430122,
+      "ci_low": 0.19884575818724015,
+      "ci_high": 0.5563318140588273,
+      "p_value": 3.4676170988885084e-05,
+      "r_squared": 0.376121502605249
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Open/unrestricted only",
+      "outcome": "superstructure_rating",
+      "outcome_label": "Superstructure rating",
+      "label": "Open/unrestricted only",
+      "n": 2231,
+      "clusters": 18,
+      "k": 59,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.43953976667315764,
+      "se": 0.058458564828348054,
+      "ci_low": 0.3249630850216955,
+      "ci_high": 0.5541164483246197,
+      "p_value": 5.5270359236477293e-14,
+      "r_squared": 0.4368529600889841
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "RD sensitivity",
+      "specification": "Open/unrestricted only",
+      "outcome": "substructure_rating",
+      "outcome_label": "Substructure rating",
+      "label": "Open/unrestricted only",
+      "n": 2231,
+      "clusters": 18,
+      "k": 59,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.27484711803865125,
+      "se": 0.06159611556547558,
+      "ci_low": 0.15412094994275208,
+      "ci_high": 0.39557328613455045,
+      "p_value": 8.11659251748298e-06,
+      "r_squared": 0.41718658350051296
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "Overlap weighting",
+      "specification": "Expanded overlap weighting",
+      "outcome": "lowest_rating",
+      "outcome_label": "Lowest rating",
+      "label": "Expanded overlap weighting",
+      "n": 2784,
+      "clusters": 18,
+      "k": 58,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.4952504749431652,
+      "se": 0.06982684532754406,
+      "ci_low": 0.3583923729471299,
+      "ci_high": 0.6321085769392005,
+      "p_value": 1.316619139409968e-12,
+      "r_squared": 0.4597258125499947,
+      "auc": 0.9088573232323232,
+      "ess_a": 654.7716325882875,
+      "ess_b": 833.4887521947805
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "Overlap weighting",
+      "specification": "Expanded overlap weighting",
+      "outcome": "deck_rating",
+      "outcome_label": "Deck rating",
+      "label": "Expanded overlap weighting",
+      "n": 2784,
+      "clusters": 18,
+      "k": 58,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.3560268095723771,
+      "se": 0.1307858852225905,
+      "ci_low": 0.09969118484991046,
+      "ci_high": 0.6123624342948437,
+      "p_value": 0.006484667289142594,
+      "r_squared": 0.3616748187296397,
+      "auc": 0.9088573232323232,
+      "ess_a": 654.7716325882875,
+      "ess_b": 833.4887521947805
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "Overlap weighting",
+      "specification": "Expanded overlap weighting",
+      "outcome": "superstructure_rating",
+      "outcome_label": "Superstructure rating",
+      "label": "Expanded overlap weighting",
+      "n": 2784,
+      "clusters": 18,
+      "k": 58,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.3555191080913911,
+      "se": 0.10680226853839034,
+      "ci_low": 0.1461905082889707,
+      "ci_high": 0.5648477078938114,
+      "p_value": 0.000872335733704831,
+      "r_squared": 0.47981309651034865,
+      "auc": 0.9088573232323232,
+      "ess_a": 654.7716325882875,
+      "ess_b": 833.4887521947805
+    },
+    {
+      "border_pair": "KS-MO",
+      "model_family": "Overlap weighting",
+      "specification": "Expanded overlap weighting",
+      "outcome": "substructure_rating",
+      "outcome_label": "Substructure rating",
+      "label": "Expanded overlap weighting",
+      "n": 2784,
+      "clusters": 18,
+      "k": 58,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": 0.31101692699134675,
+      "se": 0.057019151946009275,
+      "ci_low": 0.19926144274815163,
+      "ci_high": 0.4227724112345419,
+      "p_value": 4.908194384420769e-08,
+      "r_squared": 0.4273564544531715,
+      "auc": 0.9088573232323232,
+      "ess_a": 654.7716325882875,
+      "ess_b": 833.4887521947805
+    }
+  ],
+  "balance": [
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "age_2025",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 44.75333333333333,
+      "mean_b": 42.375,
+      "smd": 0.09355355130007097,
+      "p_value": 0.014991888259839152
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "adt",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 9343.0475,
+      "mean_b": 11123.551136363636,
+      "smd": -0.10592571316817002,
+      "p_value": 0.004814769843030142
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "log_adt",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 7.040992401470905,
+      "mean_b": 7.3386653468492975,
+      "smd": -0.11023808345479877,
+      "p_value": 0.004070724413301363
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "truck_pct",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 6.899166666666667,
+      "mean_b": 10.776515151515152,
+      "smd": -0.49025743856933085,
+      "p_value": 2.0825050852187585e-33
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "aadtt",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 708.9591833333334,
+      "mean_b": 1355.4123611111108,
+      "smd": -0.3033873306943609,
+      "p_value": 1.982525309665258e-17
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "log_aadtt",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 3.594008441660216,
+      "mean_b": 5.026067820987546,
+      "smd": -0.4963392021272622,
+      "p_value": 1.74924940163368e-35
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "lanes_on",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 2.3866666666666667,
+      "mean_b": 2.393939393939394,
+      "smd": -0.006840400426213895,
+      "p_value": 0.8563566032276406
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "structure_length_m",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 78.30799999999999,
+      "mean_b": 81.71679292929292,
+      "smd": -0.02443292323896892,
+      "p_value": 0.5197051452101948
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "max_span_m",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 22.41933333333333,
+      "mean_b": 23.02626262626263,
+      "smd": -0.03803466691457867,
+      "p_value": 0.3239658894344268
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "deck_width_m",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 12.6585,
+      "mean_b": 12.396401515151515,
+      "smd": 0.04246087570076068,
+      "p_value": 0.26978733903678215
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "inspection_frequency_months",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 23.37,
+      "mean_b": 23.71969696969697,
+      "smd": -0.15701547132094384,
+      "p_value": 0.00010031651018017197
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "operating_rating",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 53.55033333333333,
+      "mean_b": 60.558522727272724,
+      "smd": -0.3390398625149399,
+      "p_value": 1.9750031143280683e-18
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "inventory_rating",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 33.52791666666667,
+      "mean_b": 35.68863636363636,
+      "smd": -0.1657214211183043,
+      "p_value": 1.589145337689193e-05
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "latitude",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": 38.76077027314815,
+      "mean_b": 38.90627902988215,
+      "smd": -0.19828503651631288,
+      "p_value": 1.8354300408623455e-07
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "continuous",
+      "variable": "longitude",
+      "n_a": 1200,
+      "n_b": 1584,
+      "mean_a": -94.7880697337963,
+      "mean_b": -94.61946576003086,
+      "smd": -0.9966410653841784,
+      "p_value": 1.4225679806770648e-129
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "structure_kind_code",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.23843356221293324
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "structure_type_code",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.2792477115230017
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "functional_class_code",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.2324773575435444
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "design_load_code",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.3743813079459969
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "owner_code",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.1976080496108171
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "maintenance_code",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.1866903735771028
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "highway_system_code",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.10619627490453593
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "national_network",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.0017892783374261843
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "strahnet",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.10823608861097542
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "deck_protection_code",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.14053318010293717
+    },
+    {
+      "border_pair": "KS-MO",
+      "type": "categorical",
+      "variable": "open_status_code",
+      "n_a": 1200,
+      "n_b": 1584,
+      "cramers_v": 0.09453218940706705
+    }
+  ],
+  "matched_pairs": [],
+  "climate_proxy": [
+    {
+      "border_pair": "KS-MO",
+      "variable": "latitude",
+      "label": "Continuity",
+      "n": 2784,
+      "clusters": 18,
+      "k": 21,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": -0.016850283790123655,
+      "se": 0.010864417241276418,
+      "ci_low": -0.03814415029604144,
+      "ci_high": 0.004443582715794137,
+      "p_value": 0.12091111071242325,
+      "r_squared": 0.8781762641380735
+    },
+    {
+      "border_pair": "KS-MO",
+      "variable": "longitude",
+      "label": "Continuity",
+      "n": 2784,
+      "clusters": 18,
+      "k": 21,
+      "covariance": "cluster_25km",
+      "estimate_a_minus_b": -0.011361792075717858,
+      "se": 0.005396471759455297,
+      "ci_low": -0.02193868236783774,
+      "ci_high": -0.0007849017835979775,
+      "p_value": 0.03525552982276936,
+      "r_squared": 0.8899658555313296
+    }
+  ]
+}

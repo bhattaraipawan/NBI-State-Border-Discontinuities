@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "required_files_present",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "placebo_hc3_below_10_clusters",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "wild_bootstrap_rule_KS-MO",
+      "passed": true,
+      "details": {
+        "border_pair": "KS-MO",
+        "clusters": 18,
+        "estimate": 0.42497650623074,
+        "bootstrap_p": 3.999920001599968e-05,
+        "method": "monte_carlo_rademacher",
+        "patterns": 50000,
+        "seed": 42,
+        "null_q025": -0.3204137074453701,
+        "null_q975": 0.31862655203599594
+      }
+    },
+    {
+      "check": "at_least_five_high_priority_borders",
+      "passed": true,
+      "details": {
+        "count": 13
+      }
+    },
+    {
+      "check": "exact_top5_matches_screening_top5",
+      "passed": true,
+      "details": {
+        "screening_top5": [
+          "NJ-PA",
+          "KS-MO",
+          "IN-KY",
+          "ID-MT",
+          "OR-WA"
+        ],
+        "exact_recorded_top5": [
+          "NJ-PA",
+          "KS-MO",
+          "IN-KY",
+          "ID-MT",
+          "OR-WA"
+        ]
+      }
+    },
+    {
+      "check": "exact_analysis_contains_only_screening_top5",
+      "passed": true,
+      "details": {
+        "screening_top5": [
+          "NJ-PA",
+          "KS-MO",
+          "IN-KY",
+          "ID-MT",
+          "OR-WA"
+        ],
+        "analysis_pairs": [
+          "NJ-PA",
+          "KS-MO",
+          "IN-KY",
+          "ID-MT",
+          "OR-WA"
+        ]
+      }
+    },
+    {
+      "check": "ksmo_available_for_lead_deep_dive",
+      "passed": true,
+      "details": {
+        "screening_top5": [
+          "NJ-PA",
+          "KS-MO",
+          "IN-KY",
+          "ID-MT",
+          "OR-WA"
+        ]
+      }
+    }
+  ]
+}

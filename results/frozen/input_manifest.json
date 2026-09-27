@@ -1,0 +1,25 @@
+{
+  "inputs": [
+    {
+      "label": "FHWA 2025 NBI",
+      "path": "data\\raw\\2025HwyBridgesDelimitedAllStates.txt",
+      "bytes": 256436264,
+      "sha256": "b59233c65b78bab2f31c3ddda579d894d1b381164885eefa9179eeaf5f69a7f1",
+      "source": "https://www.fhwa.dot.gov/bridge/nbi/ascii2025.cfm"
+    },
+    {
+      "label": "U.S. Census 2025 TIGER/Line States",
+      "path": "data\\raw\\tl_2025_us_state.zip",
+      "bytes": 9956072,
+      "sha256": "59a220888a8d9be8117c4fcd38f542bd02d81abf0d198c78113595ad540dd957",
+      "source": "https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html"
+    },
+    {
+      "label": "NOAA nClimDiv county climate subset",
+      "path": "data\\external\\NOAA_nClimDiv_1991_2020_County_Climate_KS_MO.csv",
+      "bytes": 12309,
+      "sha256": "bb1ef017cdeb0ffff0a4cd0d3e9bde2ee8d0749afcbc1793144ae815e184fabb",
+      "source": "https://doi.org/10.7289/V5M32STR"
+    }
+  ]
+}

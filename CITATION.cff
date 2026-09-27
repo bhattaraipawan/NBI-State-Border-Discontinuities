@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this repository and the associated manuscript."
+title: "NBI State-Border Discontinuity Analysis"
+type: software
+authors:
+  - family-names: Bhattarai
+    given-names: Pawan
+version: 1.0.0
+date-released: 2026-09-27
+license: MIT
+repository-code: "https://github.com/bhattaraipawan/NBI-State-Border-Discontinuities"
+abstract: >-
+  Reproducible Python workflow for outcome-blind U.S. state-border screening,
+  exact geographic discontinuity analysis, matching, robustness checks, and
+  climate sensitivity using the 2025 National Bridge Inventory. The finalized
+  workflow analyzes the five highest-ranked borders and uses Kansas-Missouri as
+  the sole detailed case.
+keywords:
+  - National Bridge Inventory
+  - bridge condition ratings
+  - geographic regression discontinuity
+  - reproducible research
